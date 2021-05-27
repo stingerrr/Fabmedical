@@ -7,6 +7,7 @@ FROM node:dubnium AS build
 RUN npm install -g @angular/cli@~8.3.4
 
 WORKDIR /usr/src/app
+ENV CONTENT_API_URL http://localhost:3001
 
 # Install app dependencies
 COPY package.json /usr/src/app/
